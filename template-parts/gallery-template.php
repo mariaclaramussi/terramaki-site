@@ -18,13 +18,17 @@
                         <div class="gallery-card">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/calmdown-img.png" alt="Imagem do restaurante">
                         </div>
-
                         <div class="gallery-card">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/technique-img.png" alt="Imagem do restaurante">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/technique-1.png" alt="Imagem do restaurante">
                         </div>
-
                         <div class="gallery-card">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-home-img.png" alt="Imagem do restaurante">
+                        </div>
+                        <div class="gallery-card">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-about-img.jpg" alt="Imagem do restaurante">
+                        </div>
+                        <div class="gallery-card">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-playground.jpg" alt="Imagem do restaurante">
                         </div>
                     </div>
 
