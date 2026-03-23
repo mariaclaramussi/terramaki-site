@@ -23,10 +23,14 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Send+Flowers&family=Sora:wght@100..800&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/ec34bba31e.js" crossorigin="anonymous"></script>
 
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -36,40 +40,61 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> class="<?php if(is_page_template('page-reservado.php')): ?><?php echo 'light-background'?><?php endif; ?>">
     <?php wp_body_open(); ?>
 
     <header
-        class="header <?php if(is_page_template('page-about.php') || is_page_template('page-projetos.php') || is_page_template('page-servicos.php')): ?><?php echo 'white-background'?><?php else: ?><?php echo 'clear-background'?><?php endif; ?>">
+        class="header <?php if(is_page_template('page-reservado.php')): ?><?php echo 'light-background'?><?php endif; ?>">
         <div class="container">
             <div class="row">
-                <div class="align-items-desktop">
-                    <a href="<?php echo get_site_url(); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kalai-logo.svg"
-                            alt="Logo do estúdio">
-                    </a>
+                <ul class="web-menu">
+                    <div class="align-menu-items">
+                        <li><a href="<?php echo get_site_url(); ?>">Início</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/sobre">A experiência</a></li>
+                    </div>
+
+                    <?php if(is_page_template('page-reservado.php')): ?>
+                        <a href="<?php echo get_site_url(); ?>/reservado">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-reservado.svg"
+                                alt="Logo do Terramaki Reservado">
+                        </a>
+                    <?php else: ?>
+                        <a href="<?php echo get_site_url(); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-bege.svg"
+                                alt="Logo do Terramaki">
+                        </a>
+                    <?php endif; ?>
+
+                    <div class="align-menu-items">
+                        <li><a href="<?php echo get_site_url(); ?>/reservado">O Reservado</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/contato">Contato</a></li>
+                    </div>
+                </ul>
+                 <div class="mobile-menu">
+                    <?php if(is_page_template('page-reservado.php')): ?>
+                        <a href="<?php echo get_site_url(); ?>/reservado">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-reservado.svg"
+                                alt="Logo do Terramaki Reservado">
+                        </a>
+                    <?php else: ?>
+                        <a href="<?php echo get_site_url(); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-bege.svg"
+                                alt="Logo do Terramaki">
+                        </a>
+                    <?php endif; ?>
 
                     <input class="menu-btn" type="checkbox" id="menu-btn" />
                     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-                    <div class="menu">
+                    <div class="menu-list">
                         <ul>
-                            <li><a href="<?php echo get_site_url(); ?>">Home</a></li>
-                            <li><a href="<?php echo get_site_url(); ?>/o-estudio">O estúdio</a></li>
-                            <li><a href="<?php echo get_site_url(); ?>/servicos">Serviços</a></li>
-                            <li><a href="<?php echo get_site_url(); ?>/projetos">Projetos</a></li>
-                            <li><a id="faq-anchor" href="<?php echo get_site_url(); ?>/servicos/#faq">FAQ</a></li>
-                            <li><a href="https://n2nix0rn.forms.app/orcamento" target="_blank"
-                                    class="black-button">Solicite um <br />orçamento</a>
-                            </li>
+                            <li><a href="<?php echo get_site_url(); ?>">Início</a></li>
+                            <li><a href="<?php echo get_site_url(); ?>/sobre">A experiência</a></li>
+                            <li><a href="<?php echo get_site_url(); ?>/reservado">O Reservado</a></li>
+                            <li><a href="<?php echo get_site_url(); ?>/contato">Contato</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
-    <a class="fixed-wpp-btn <?php if(is_page_template('page-about.php') || is_page_template('page-projetos.php') || is_page_template('page-servicos.php')): ?><?php echo ''?><?php else: ?><?php echo 'hide'?><?php endif; ?>"
-        href="https://api.whatsapp.com/send/?phone=552139622989&text=Ol%C3%A1,+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+prestados+pelo+Est%C3%BAdio+Kalai.+Poderia+me+ajudar%2C+por+favor%3F&type=phone_number&app_absent=0"
-        target="_blank" class="whatsapp-button">
-        <i class="fa-brands fa-whatsapp"></i></a>

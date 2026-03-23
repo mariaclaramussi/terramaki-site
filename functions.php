@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Kalai
- * @since Kalai 1.0
+ * @subpackage Terramaki
+ * @since Terramaki 1.0
  */
 
 /**
@@ -699,3 +699,25 @@ function owlcarousel_scripts() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'owlcarousel_scripts' );
+
+add_action('wp_head', function() {
+    if (is_front_page() || is_home()) {
+        ?>
+        <meta name="description" content="Terramaki - Restaurante japonês em Angra dos Reis. Gastronomia autoral com técnica japonesa e alma brasileira. Reserve sua mesa.">
+        <meta property="og:title" content="Terramaki - Técnica Japonesa, Alma Brasileira">
+        <meta property="og:description" content="Gastronomia autoral, frescor absoluto e acolhimento genuíno em cada detalhe.">
+        <meta property="og:type" content="restaurant">
+        <?php
+    }
+});
+
+add_action('wp_head', function() {
+    if (is_page_template('page-reservado.php')) {
+        ?>
+        <meta name="description" content="Terramaki Reservado - Serviço de eventos e catering de culinária japonesa para casamentos, aniversários, eventos corporativos e celebrações especiais em Angra dos Reis.">
+        <meta property="og:title" content="Terramaki Reservado - Eventos">
+        <meta property="og:description" content="A experiência Terramaki onde você quiser. Eventos personalizados com gastronomia japonesa de alta qualidade.">
+        <meta property="og:type" content="website">
+        <?php
+    }
+});
