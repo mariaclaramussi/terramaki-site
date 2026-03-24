@@ -21,7 +21,7 @@ get_header(); ?>
 
                 <div class="align-buttons">
                     <a href="https://maps.app.goo.gl/BTveEjSqpL9P2fZq7" class="btn outline" target="_blank" rel="noopener">Ver no mapa</a>
-                    <a href="https://wa.me/55249999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn beige" target="_blank" rel="noopener">Reservar mesa</a>
+                    <a href="https://wa.me/5524999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn beige" target="_blank" rel="noopener">Reservar mesa</a>
                 </div>
 
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-lounge.png"
@@ -34,7 +34,7 @@ get_header(); ?>
                 </div>
                 <div class="contact-info">
                     <span>Whatsapp</span>
-                    <p><a href="https://wa.me/55249999407094" target="_blank" rel="noopener">+55 24 99994-07094</a></p>
+                    <p><a href="https://wa.me/5524999407094" target="_blank" rel="noopener">+55 24 99940-7094</a></p>
                 </div>
                 <div class="contact-info">
                     <span>Siga nossas redes</span>

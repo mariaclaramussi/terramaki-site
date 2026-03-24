@@ -29,7 +29,7 @@ get_header(); ?>
                 <p>Gastronomia autoral, frescor absoluto e acolhimento genuíno em cada detalhe.</p>
             </div>
             <div class="col-md-12 gap-2">
-                <a href="https://wa.me/55249999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn green" target="_blank" rel="noopener">Reserve sua mesa</a>
+                <a href="https://wa.me/5524999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn green" target="_blank" rel="noopener">Reserve sua mesa</a>
                 <a href="https://terramaki-casagastronomica.goomer.app/menu" class="btn beige" target="_blank" rel="noopener">Faça seu pedido</a>
             </div>
         </div>

@@ -48,7 +48,7 @@ get_header(); ?>
                     <br/>
                     Cada visita é uma nova possibilidade de surpreender
                 </p>
-                <a href="https://wa.me/55249999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn green" target="_blank" rel="noopener">Reserve sua mesa</a>
+                <a href="https://wa.me/5524999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn green" target="_blank" rel="noopener">Reserve sua mesa</a>
             </div>
             <div class="col-xl-6 d-flex justify-content-end">
                 <img class="d-none d-xl-block" src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-plate.jpg"
@@ -75,7 +75,7 @@ get_header(); ?>
                     <br/>
                     Aqui, o tempo desacelera para que a experiência aconteça.
                 </p>
-                <a href="https://wa.me/55249999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn green" target="_blank" rel="noopener">Reserve sua mesa</a>
+                <a href="https://wa.me/5524999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn green" target="_blank" rel="noopener">Reserve sua mesa</a>
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@ get_header(); ?>
                     <br/>
                     Porque cuidar da experiência também é cuidar de quem você ama.
                 </p>
-                <a href="https://wa.me/55249999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn green" target="_blank" rel="noopener">Reserve sua mesa</a>
+                <a href="https://wa.me/5524999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn green" target="_blank" rel="noopener">Reserve sua mesa</a>
             </div>
             <div class="col-xl-6 d-flex justify-content-end">
                 <img class="d-none d-xl-block" src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-playground.jpg"
