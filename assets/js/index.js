@@ -59,116 +59,110 @@ updateStack();
 // SCROLL ANIMATION - SCROLLYTELLING //
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-const slides = gsap.utils.toArray("#tecnique-section .tecnique-item");
-const wrapper = document.querySelector("#tecnique-section .tecnique-wrapper");
-const section = document.querySelector("#tecnique-section");
-const progressDots = document.querySelectorAll(".progress-dot");
+// Aguarda o carregamento completo das imagens antes de inicializar
+window.addEventListener("load", function() {
+  const slides = gsap.utils.toArray("#tecnique-section .tecnique-item");
+  const section = document.querySelector("#tecnique-section");
+  const progressDots = document.querySelectorAll(".progress-dot");
 
-if (slides.length > 0 && section) {
-  // Estado inicial: todos ocultos exceto o primeiro
-  // autoAlpha combina opacity + visibility automaticamente
-  gsap.set(slides, {
-    autoAlpha: 0,
-    y: 50,
-    scale: 0.98,
-  });
+  if (slides.length > 0 && section) {
+    // Refresh ScrollTrigger após load para calcular posições corretas
+    ScrollTrigger.refresh();
 
-  gsap.set(slides[0], {
-    autoAlpha: 1,
-    y: 0,
-    scale: 1,
-  });
+    // Estado inicial: todos ocultos exceto o primeiro
+    gsap.set(slides, {
+      autoAlpha: 0,
+      y: 50,
+      scale: 0.98,
+    });
 
-  // Função para atualizar dots ativos
-  function updateProgressDots(activeIndex) {
-    progressDots.forEach((dot, index) => {
-      if (index === activeIndex) {
-        dot.classList.add("active");
-      } else {
-        dot.classList.remove("active");
+    gsap.set(slides[0], {
+      autoAlpha: 1,
+      y: 0,
+      scale: 1,
+    });
+
+    // Função para atualizar dots ativos
+    function updateProgressDots(activeIndex) {
+      progressDots.forEach((dot, index) => {
+        if (index === activeIndex) {
+          dot.classList.add("active");
+        } else {
+          dot.classList.remove("active");
+        }
+      });
+    }
+
+    // Timeline principal controlada pelo scroll
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: () => "+=" + window.innerHeight * slides.length,
+        pin: true,
+        pinSpacing: true,
+        scrub: 1.5,
+        invalidateOnRefresh: true,
+        onUpdate: (self) => {
+          const progress = self.progress;
+          const segmentSize = 1 / slides.length;
+          let activeIndex = Math.floor(progress / segmentSize);
+          activeIndex = Math.min(activeIndex, slides.length - 1);
+          updateProgressDots(activeIndex);
+        },
+      },
+    });
+
+    // Cria a animação de transição entre slides
+    slides.forEach((slide, index) => {
+      if (index > 0) {
+        const transitionStart = index;
+
+        tl.to(
+          slides[index - 1],
+          {
+            autoAlpha: 0,
+            y: -30,
+            scale: 1.01,
+            duration: 0.4,
+            ease: "sine.out",
+          },
+          transitionStart
+        );
+
+        tl.to(
+          slide,
+          {
+            autoAlpha: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.4,
+            ease: "sine.out",
+          },
+          transitionStart + 0.4
+        );
       }
     });
-  }
 
-  // Timeline principal controlada pelo scroll
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: section,
-      start: "top top",
-      end: () => "+=" + window.innerHeight * slides.length * 1.2,
-      pin: true,
-      pinSpacing: true,
-      scrub: 1.5,
-      onUpdate: (self) => {
-        // Usa o progresso do scroll (0-1) para determinar o slide ativo
-        // Divide o progresso em segmentos iguais para cada slide
-        const progress = self.progress;
+    tl.to({}, { duration: 0.5 });
+
+    // Click nos dots para navegar
+    progressDots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        const scrollTriggerInstance = tl.scrollTrigger;
         const segmentSize = 1 / slides.length;
-        let activeIndex = Math.floor(progress / segmentSize);
+        const targetProgress = index * segmentSize + segmentSize / 2;
+        const targetScroll =
+          scrollTriggerInstance.start +
+          (scrollTriggerInstance.end - scrollTriggerInstance.start) *
+            targetProgress;
 
-        // Garante que não ultrapasse o último slide
-        activeIndex = Math.min(activeIndex, slides.length - 1);
-
-        updateProgressDots(activeIndex);
-      },
-    },
-  });
-
-  // Cria a animação de transição entre slides (sequencial, sem sobreposição)
-  // Cada slide ocupa 1 segmento de tempo na timeline (0-1, 1-2, 2-3, etc.)
-  slides.forEach((slide, index) => {
-    if (index > 0) {
-      // Posição na timeline onde a transição acontece
-      const transitionStart = index;
-
-      // Saída completa do slide anterior
-      tl.to(
-        slides[index - 1],
-        {
-          autoAlpha: 0,
-          y: -30,
-          scale: 1.01,
-          duration: 0.4,
-          ease: "sine.out",
-        },
-        transitionStart,
-      );
-
-      // Entrada do novo slide (após saída completa)
-      tl.to(
-        slide,
-        {
-          autoAlpha: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.4,
-          ease: "sine.out",
-        },
-        transitionStart + 0.4,
-      );
-    }
-  });
-
-  // Adiciona tempo de pausa no final para o último slide ficar visível
-  tl.to({}, { duration: 0.5 });
-
-  // Click nos dots para navegar
-  progressDots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      const scrollTriggerInstance = tl.scrollTrigger;
-      // Calcula o progresso alvo baseado no segmento do slide
-      const segmentSize = 1 / slides.length;
-      const targetProgress = index * segmentSize + segmentSize / 2; // Centro do segmento
-      const targetScroll =
-        scrollTriggerInstance.start +
-        (scrollTriggerInstance.end - scrollTriggerInstance.start) *
-          targetProgress;
-
-      gsap.to(window, {
-        scrollTo: targetScroll,
-        duration: 0.8,
-        ease: "power2.inOut",
+        gsap.to(window, {
+          scrollTo: targetScroll,
+          duration: 0.8,
+          ease: "power2.inOut",
+        });
       });
     });
-  });
-}
+  }
+});
