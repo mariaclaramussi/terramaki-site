@@ -19,7 +19,7 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-hero-bg.png"
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-hero-bg.svg"
         class="hero-bottom-bg-img" alt="Decoração japonesa minimalista do ambiente Terramaki">
 </section>
 
@@ -41,7 +41,7 @@ get_header(); ?>
             <div class="col-xl-6">
                 <h2>Sazonalidade e <br/>criação</h2>
                  <img class="d-xl-none" src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-plate.jpg"
-                        alt="Prato sazonal de sushi artesanal do Terramaki">
+                        alt="Prato sazonal de sushi artesanal do Terramaki" loading="lazy">
                 <h4>Nossa cozinha está sempre em evolução.</h4>
                 <p>Menus sazonais, peixe do dia e criações exclusivas mantêm a experiência em constante renovação, convidando à descoberta e à curiosidade.
                     <br/>
@@ -52,7 +52,7 @@ get_header(); ?>
             </div>
             <div class="col-xl-6 d-flex justify-content-end">
                 <img class="d-none d-xl-block" src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-plate.jpg"
-                        alt="Prato sazonal de sushi artesanal do Terramaki">
+                        alt="Prato sazonal de sushi artesanal do Terramaki" loading="lazy">
             </div>
         </div>
     </div>
@@ -63,12 +63,12 @@ get_header(); ?>
         <div class="row mobile-reversed">
             <div class="col-xl-6">
                 <img class="d-none d-xl-block" src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-lounge.png"
-                        alt="Salão acolhedor do Terramaki com iluminação ambiente">
+                        alt="Salão acolhedor do Terramaki com iluminação ambiente" loading="lazy">
             </div>
             <div class="col-xl-6">
                 <h2>Um espaço para desacelerar</h2>
                 <img class="d-xl-none" src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-lounge.png"
-                        alt="Salão acolhedor do Terramaki com iluminação ambiente">
+                        alt="Salão acolhedor do Terramaki com iluminação ambiente" loading="lazy">
                 <h4>Luz, textura, sons e aromas se unem para criar uma atmosfera acolhedora, elegante e tranquila.</h4>
                 <p>Um ambiente pensado para conversas sem pressa, encontros especiais, celebrações íntimas e momentos que merecem ser vividos com atenção.
                     <br/>
@@ -87,7 +87,7 @@ get_header(); ?>
             <div class="col-xl-6">
                 <h2>Diversão segura para eles</h2>
                  <img class="d-xl-none" src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-playground.jpg"
-                        alt="Espaço kids com recreadores para crianças no Terramaki">
+                        alt="Espaço kids com recreadores para crianças no Terramaki" loading="lazy">
                 <h4>Temos um espaço kids com recreadores para seus filhos</h4>
                 <p>Pensado para que toda a família viva a experiência Terramaki com leveza, tranquilidade e prazer. Enquanto os pequenos se divertem com segurança, os adultos podem saborear o momento com calma, presença e conexão.  
                     <br/>
@@ -98,7 +98,7 @@ get_header(); ?>
             </div>
             <div class="col-xl-6 d-flex justify-content-end">
                 <img class="d-none d-xl-block" src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-playground.jpg"
-                        alt="Espaço kids com recreadores para crianças no Terramaki">
+                        alt="Espaço kids com recreadores para crianças no Terramaki" loading="lazy">
             </div>
         </div>
     </div>

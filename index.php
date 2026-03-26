@@ -18,13 +18,13 @@
 get_header(); ?>
 
 <section id="intro">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.png"
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.svg"
         class="hero-bg-img web" alt="Vista panorâmica do restaurante Terramaki em Angra dos Reis">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg-mobile.png"
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg-mobile.svg"
         class="hero-bg-img mobile" alt="Restaurante Terramaki - ambiente acolhedor em Angra dos Reis">
     <div class="container">
         <div class="row">
-            <div class="col-md-12" data-aos="fade-up" data-aos-duration="1500">
+            <div class="col-md-12">
                 <h1>Técnica japonesa, <br/>alma brasileira</h1>
                 <p>Gastronomia autoral, frescor absoluto e acolhimento genuíno em cada detalhe.</p>
             </div>
@@ -42,8 +42,8 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-about-bg.png"
-        class="hero-bottom-bg-img" alt="Decoração elegante do ambiente Terramaki">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-about-bg.svg"
+        class="hero-bottom-bg-img" alt="Decoração elegante do ambiente Terramaki" loading="lazy">
 </section>
 
 <?php
@@ -71,36 +71,36 @@ get_header(); ?>
         </div>
         
         <div class="tecnique-slides">
-        <h2>Nossos diferenciais</h2>
+            <h2>Nossos diferenciais</h2>
 
             <div class="tecnique-item">
                 <h3>Técnica <span aria-hidden="true">&</span> precisão</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/technique-1.png"
-                    alt="Chef executando corte preciso de sashimi">
+                    alt="Chef executando corte preciso de sashimi" loading="lazy">
                 <p>cortes rigorosos, processos exatos, constância impecável.</p>
             </div>
             <div class="tecnique-item">
                 <h3>Valorização de Angra</h3>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/technique-2.jpg"
-                    alt="Ingredientes frescos da Costa Verde">
+                    alt="Ingredientes frescos da Costa Verde" loading="lazy">
                 <p>nossa cozinha japonesa ganha vida com elementos da costa verde</p>
             </div>
             <div class="tecnique-item">
                 <h3>Transparência <span aria-hidden="true">&</span> Segurança</h3>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/technique-3.png"
-                    alt="Cozinha limpa e organizada do Terramaki">
+                    alt="Cozinha limpa e organizada do Terramaki" loading="lazy">
                 <p>processos, higiene, origem e manipulação segura é parte profunda da nossa gestão</p>
             </div>
             <div class="tecnique-item">
                 <h3>Repertório <span aria-hidden="true">&</span> Conhecimento</h3>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/technique-4.png"
-                    alt="Variedade de peixes e cortes japoneses">
+                    alt="Variedade de peixes e cortes japoneses" loading="lazy">
                 <p>orientamos você sobre cortes, peixes, preparações, combinações e escolhas</p>
             </div>
             <div class="tecnique-item">
                 <h3>Renovação <span aria-hidden="true">&</span> Sazonalidade</h3>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/technique-5.png"
-                    alt="Pratos sazonais e inovações do cardápio">
+                    alt="Pratos sazonais e inovações do cardápio" loading="lazy">
                 <p>mantemos a novidade viva, especialmente para quem busca variedade e descobertas</p>
             </div>
         </div>
@@ -117,7 +117,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-md-12 col-lg-4">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-lounge.png"
-                    alt="Salão principal do Terramaki com ambiente aconchegante">
+                    alt="Salão principal do Terramaki com ambiente aconchegante" loading="lazy">
             </div>
             <div class="col-md-12 col-lg-6 offset-lg-2">
                 <div class="accordion-container">    

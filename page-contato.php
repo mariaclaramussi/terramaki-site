@@ -19,13 +19,13 @@ get_header(); ?>
                     <p>Angra dos Reis, Rio de Janeiro</p>
                 </address>
 
-                <div class="align-buttons">
+                <div class="col-md-12 d-flex flex-column gap-3 flex-md-row gap-md-4 mt-4">
                     <a href="https://maps.app.goo.gl/BTveEjSqpL9P2fZq7" class="btn outline" target="_blank" rel="noopener">Ver no mapa</a>
                     <a href="https://wa.me/5524999407094?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa" class="btn beige" target="_blank" rel="noopener">Reservar mesa</a>
                 </div>
 
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/restaurant-lounge.png"
-                    alt="Salão elegante do restaurante Terramaki em Angra dos Reis">
+                    alt="Salão elegante do restaurante Terramaki em Angra dos Reis" loading="lazy">
             </div>
             <div class="offset-xl-4 col-12 col-xl-4">
                 <div class="contact-info">
